@@ -17,11 +17,8 @@ public class MajorPage extends BaseClass{
 
     private Logger logger = LogManager.getLogger(MajorPage.class);
 
-    @FindBy(css="button.header2__auth") //локатор раздела логина
-    private WebElement loginButton;
-
-    @FindBy(css="input.js-email-input")  //локатор поля аккаунта логина
-    private WebElement accField;
+    @FindBy(xpath="//a[contains(text(),'Events')]") //локатор event tab'а
+    private WebElement eventTab;
 
     public MajorPage(WebDriver driver) {
         super(driver);
@@ -36,6 +33,7 @@ public class MajorPage extends BaseClass{
     }
 
     public EventsPage clickEventsTab(){
+        eventTab.click();
         logger.info("Переходим на вкладку EVENTS");
         return new EventsPage(driver);
     }
