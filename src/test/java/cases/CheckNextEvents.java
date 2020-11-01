@@ -16,6 +16,20 @@ public class CheckNextEvents extends BaseHooks {
         majorPage.open("https://events.epam.com/")
                  .clickEventsTab()
                  .clickUpcomingEventsButton()
+                 .assertUpcomingEventsNumberIsNotNull()
                  .assertUpcomingEventsNumber();
     }
+
+    @Test
+    public void checkUpcomingEventsCards() {
+        MajorPage majorPage = new MajorPage(driver);
+
+        majorPage.open("https://events.epam.com/")
+                .clickEventsTab()
+                .clickUpcomingEventsButton()
+                .assertUpcomingEventsNumberIsNotNull()
+                .checkCardsContent();
+    }
+
+
 }

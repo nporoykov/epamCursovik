@@ -12,7 +12,7 @@ public class BaseHooks {
 
     @BeforeClass
     public static void setup() {
-        driver = WebDriverFactory.createDriver(WebDriverType.CHROME);
+        driver = WebDriverFactory.createDriver(WebDriverType.OPERA);
 
         if (driver != null) {
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

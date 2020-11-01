@@ -26,8 +26,19 @@ public class EventsPage extends BaseClass{
     @FindBy(css="span.evnt-tab-counter.evnt-label.small.white") //локатор счетчика Upcoming events
     private WebElement eventsCount;
 
-    @FindBys(@FindBy(css="div.evnt-events-column.cell-3")) //локатор списка карточек Upcoming events
+ //   @FindBys(@FindBy(css="div.evnt-events-column.cell-3")) //локатор списка карточек Upcoming events
+ //   private List<WebElement> listCount;
+
+    @FindBys(@FindBy(xpath="//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Upcoming events
     private List<WebElement> listCount;
+
+    String lang = ".//p[@class='language']/span";  //
+    String site = ".//p[@class='online']/span";
+    String name = ".//h1/span";
+    String date = ".//p/span[@class='date']";
+    String regInfo = ".//p/span[@class='status free-attend']";
+    String speakersList = ".//div[@class='evnt-speaker']";  // data-name="Vasil Kasimov"
+  //  String cardsList = "//div[@class='evnt-events-column cell-3']";
 
 
     public EventsPage(WebDriver driver) {
@@ -47,13 +58,52 @@ public class EventsPage extends BaseClass{
         return eventsCount.getText();
     }
 
-    public EventsPage assertUpcomingEventsNumber(){
-        assertThat(listCount.size()).isEqualTo(Integer.parseInt(eventsCount.getText()));
-        logger.info("Проверяем, что количество карточек равно счетчику на кнопке Upcoming Events");
-//Количество карточек равно счетчику на кнопке Upcoming Events
+    public EventsPage assertUpcomingEventsNumberIsNotNull(){
+        assertThat(listCount.size()).isNotNull();
+        logger.info("Проверяем, что количество карточек не null");
+
         return this;
     }
 
-  //  List<WebElement> smartPhones = driver.findElements((By.xpath("//img[contains(@alt,'Смартфон ')]")));
-  //  assertEquals(2, smartPhones.size());
+    public EventsPage assertUpcomingEventsNumber(){
+        assertThat(listCount.size()).isEqualTo(Integer.parseInt(eventsCount.getText()));
+        logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Upcoming Events " + Integer.parseInt(eventsCount.getText()));
+
+        return this;
+    }
+
+
+    public EventsPage checkCardsContent(){
+        for (Integer i = 0;i < listCount.size(); i++){
+
+            assertThat(listCount.get(i).findElement(By.xpath(site)).getText()).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" место проведения не null и = " + listCount.get(i).findElement(By.xpath(site)).getText());
+
+            assertThat(listCount.get(i).findElement(By.xpath(lang)).getText()).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" указанный язык не null и = " + listCount.get(i).findElement(By.xpath(lang)).getText());
+
+            assertThat(listCount.get(i).findElement(By.xpath(name)).getText()).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" название мероприятия не null и = " + listCount.get(i).findElement(By.xpath(name)).getText());
+
+            assertThat(listCount.get(i).findElement(By.xpath(date)).getText()).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" датта мероприятия не null и = " + listCount.get(i).findElement(By.xpath(date)).getText());
+
+            assertThat(listCount.get(i).findElement(By.xpath(regInfo)).getText()).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" информация о регистрации не null и = " + listCount.get(i).findElement(By.xpath(regInfo)).getText());
+
+            assertThat(listCount.get(i).findElements(By.xpath(speakersList))).isNotNull();
+            logger.info("Проверяем, что в карточке "+(i+1)+" количество спикеров не null");
+
+            List<WebElement> speakers = (listCount.get(i)).findElements(By.xpath(speakersList));
+
+            for(Integer s = 0;s < speakers.size(); s++){
+                logger.info("Спикер №_" + (s+1) + " в карточке "+(i+1)+ " = " + speakers.get(s).getAttribute("data-name").toString());
+            }
+
+        }
+
+        return this;
+    }
+
+
 }
