@@ -33,7 +33,7 @@ public class CheckNextEvents extends BaseHooks {
 
     @Test
     public void checkFilteredVideoCards() {
-        MajorPage majorPage = new MajorPage(getWebDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()

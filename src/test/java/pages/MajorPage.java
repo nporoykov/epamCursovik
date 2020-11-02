@@ -20,6 +20,9 @@ public class MajorPage extends BaseClass{
     @FindBy(xpath="//a[contains(text(),'Events')]") //локатор event tab'а
     private WebElement eventTab;
 
+    @FindBy(xpath="//a[contains(text(),'Video')]") //локатор event tab'а
+    private WebElement videoTab;
+
     public MajorPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -35,7 +38,14 @@ public class MajorPage extends BaseClass{
     public EventsPage clickEventsTab(){
         eventTab.click();
         logger.info("Переходим на вкладку EVENTS");
+
         return new EventsPage(driver);
     }
 
+    public VideoPage clickVideoTab(){
+        videoTab.click();
+        logger.info("Переходим на вкладку VIDEO");
+
+        return new VideoPage(driver);
+    }
 }
