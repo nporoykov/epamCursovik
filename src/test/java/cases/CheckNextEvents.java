@@ -31,5 +31,15 @@ public class CheckNextEvents extends BaseHooks {
                 .checkCardsContent();
     }
 
+    @Test
+    public void checkFilteredVideoCards() {
+        MajorPage majorPage = new MajorPage(getWebDriver());
+
+        majorPage.open("https://events.epam.com/")
+                .clickVideoTab()
+                .inputQaToFilter()
+                .getFilteredCardsNumber();
+
+    }
 
 }
