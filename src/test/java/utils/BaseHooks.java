@@ -33,6 +33,8 @@ public class BaseHooks {
 
     private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
 
+    public BaseHooks(){
+    }
 
     public static WebDriver getWebDriver() {
 
@@ -41,7 +43,7 @@ public class BaseHooks {
 
 
     @BeforeMethod
-    public static void runDriverThreadUp() {
+    public void runDriverThreadUp() {
         WebDriver driver = WebDriverFactory.createDriver(WebDriverType.FIREFOX);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         webDriverThreadLocal.set(driver);
@@ -49,7 +51,7 @@ public class BaseHooks {
 
 
     @AfterMethod
-    public static void cleanDriverThreadUp() {
+    public void cleanDriverThreadUp() {
         getWebDriver().manage().deleteAllCookies();
         Optional.ofNullable(getWebDriver()).ifPresent(WebDriver::quit);
     }
