@@ -23,22 +23,37 @@ public class EventsPage extends BaseClass{
     @FindBy(xpath="//span[contains(text(),'Upcoming events')]") //локатор span Upcoming events
     private WebElement upcomingEventsButton;
 
-    @FindBy(css="span.evnt-tab-counter.evnt-label.small.white") //локатор счетчика Upcoming events
+    @FindBy(xpath="//span[contains(text(),'Past Events')]") //локатор span Past Events
+    private WebElement pastEventsButton;
+
+    @FindBy(xpath="//span[text()='Upcoming']/following-sibling::span") //локатор счетчика Upcoming events
     private WebElement eventsCount;
 
- //   @FindBys(@FindBy(css="div.evnt-events-column.cell-3")) //локатор списка карточек Upcoming events
- //   private List<WebElement> listCount;
+    @FindBy(xpath="//span[text()='Past']/following-sibling::span") //локатор счетчика Past events
+    private WebElement pastEventsCount;
 
-    @FindBys(@FindBy(xpath="//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Upcoming events
-    private List<WebElement> listCount;
+    @FindBy(xpath="//span[text()='Location']") //локатор счетчика Past events     data-value="Canada"
+    private WebElement buttonFilterLocation;
 
+    @FindBy(xpath="//label[@data-value='Canada']") //локатор счетчика Past events     data-value="Canada"
+    private WebElement labelCanada;
+
+
+    @FindBys(@FindBy(xpath="//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Upcoming Events
+    private List<WebElement> listCount;    //evnt-card-wrapper
+
+    @FindBys(@FindBy(xpath="//div[@class='evnt-events-row']//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Past Events
+    private List<WebElement> listPastEventsCount;    //evnt-card-wrapper
+
+
+    String cardTag = "//div[@class='evnt-events-row']//div[@class='evnt-events-column cell-3']";
     String lang = ".//p[@class='language']/span";  //
     String site = ".//p[@class='online']/span";
     String name = ".//h1/span";
     String date = ".//p/span[@class='date']";
     String regInfo = ".//p/span[@class='status free-attend']";
-    String speakersList = ".//div[@class='evnt-speaker']";  // data-name="Vasil Kasimov"
-  //  String cardsList = "//div[@class='evnt-events-column cell-3']";
+    String speakersList = ".//div[@class='evnt-speaker']";
+
 
 
     public EventsPage(WebDriver driver) {
@@ -48,7 +63,14 @@ public class EventsPage extends BaseClass{
 
     public EventsPage clickUpcomingEventsButton(){
         upcomingEventsButton.click();
-        logger.info("Нажимаем на кнопку EVENTS");
+        logger.info("Нажимаем на кнопку UPCOMING EVENTS");
+
+        return this;
+    }
+
+    public EventsPage clickPastEventsButton(){
+        pastEventsButton.click();
+        logger.info("Нажимаем на кнопку PAST EVENTS");
 
         return this;
     }
@@ -58,12 +80,41 @@ public class EventsPage extends BaseClass{
         return eventsCount.getText();
     }
 
+    public EventsPage clickButtonFilterLocation() {
+        buttonFilterLocation.click();
+        logger.info("Нажимаем на Location в блоке фильтров");
+
+        return this;
+    }
+
+    public EventsPage clickLabelCanada() {
+        labelCanada.click();
+        logger.info("Выбираем Canada в выпадающем списке");
+
+        return this;
+    }
+
+
     public EventsPage assertUpcomingEventsNumberIsNotNull(){
         assertThat(listCount.size()).isNotNull();
         logger.info("Проверяем, что количество карточек не null");
 
         return this;
     }
+
+    public EventsPage assertPastEventsNumberIsNotNull(){
+      //  WebDriverWait wait = new WebDriverWait(driver,3).until(ExpectedConditions.visibilityOfElementLocated(
+//                WebDriverWait wait = new WebDriverWait(driver, 7);
+//        assertThat(wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name(cardTag)))).isNotNull();
+
+        Integer cardsCount = driver.findElements(By.xpath(cardTag)).size();
+
+      //  assertThat(driver.findElements(By.xpath(cardTag)).size()).isNotNull();
+        logger.info("Проверяем, что количество карточек не null и = " + cardsCount);
+
+        return this;
+    }
+
 
     public EventsPage assertUpcomingEventsNumber(){
         assertThat(listCount.size()).isEqualTo(Integer.parseInt(eventsCount.getText()));
@@ -72,6 +123,13 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
+
+    public EventsPage assertPastEventsNumber(){
+        assertThat(listPastEventsCount.size()).isEqualTo(Integer.parseInt(pastEventsCount.getText()));
+        logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Past Events " + Integer.parseInt(pastEventsCount.getText()));
+
+        return this;
+    }
 
     public EventsPage checkCardsContent(){
         for (Integer i = 0;i < listCount.size(); i++){
@@ -104,6 +162,15 @@ public class EventsPage extends BaseClass{
 
         return this;
     }
+
+    public DetailedInfoEventPage clickEventCard() {
+        listCount.get(0).click();
+        logger.info("Нажимает на любую карточку");
+
+        return new DetailedInfoEventPage(driver);
+    }
+
+
 
 
 }

@@ -16,8 +16,30 @@ public class VideoPage extends BaseClass{
     @FindBy(xpath="//input[@class='evnt-text-fields form-control evnt-search']") //локатор поля ввода поиска
     private WebElement inputField;
 
+    @FindBy(xpath="//span(contains[text(), 'More Filters'])") //локатор More Filters
+    private WebElement moreFilters;
+
+    @FindBy(xpath="//span(contains[text(), 'Category'])") //локатор category
+    private WebElement category;
+
+    @FindBy(xpath="//label[@data-value='Testing']") //локатор category -> Testing
+    private WebElement categoryTesting;
+
+    @FindBy(xpath="//span(contains[text(), 'Location'])") //локатор location
+    private WebElement location;
+
+    @FindBy(xpath="//label[@data-value='Belarus']") //локатор location –> Belarus
+    private WebElement locationBelarus;
+
+    @FindBy(xpath="//span(contains[text(), 'Language'])") //локатор language
+    private WebElement language;
+
+    @FindBy(xpath="//label[@data-value='English']") //локатор language –> English
+    private WebElement languageEnglish;
+
     @FindBys(@FindBy(xpath="//div[@class='evnt-card-wrapper']")) //локатор списка отфильтрованных карточек
     private List<WebElement> listFilteredCards;
+
 
     public VideoPage(WebDriver driver){
         super(driver);
@@ -30,6 +52,31 @@ public class VideoPage extends BaseClass{
 
         return this;
     }
+
+    public VideoPage clickMoreFilters(){
+        moreFilters.click();
+        logger.info("Нажимаем на More Filters");
+
+        return this;
+    }
+
+
+    public VideoPage selectFilters(){
+        category.click();
+        categoryTesting.click();
+        logger.info("Пользователь выбирает: Category – Testing");
+
+        location.click();
+        locationBelarus.click();
+        logger.info("Пользователь выбирает: Location – Belarus");
+
+        language.click();
+        languageEnglish.click();
+        logger.info("Пользователь выбирает: Language – English");
+
+        return this;
+    }
+
 
     public VideoPage getFilteredCardsNumber(){
         logger.info("На странице отображаются " +listFilteredCards.size()+ " докладов, содержащих в названии ключевое слово поиска QA");

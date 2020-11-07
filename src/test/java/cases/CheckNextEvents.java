@@ -31,6 +31,36 @@ public class CheckNextEvents extends BaseHooks {
                 .checkCardsContent();
     }
 
+
+    @Test
+    public void checkPastEventsCards() {
+        MajorPage majorPage = new MajorPage(driver);
+
+        majorPage.open("https://events.epam.com/")
+                .clickEventsTab()
+                .clickPastEventsButton()
+                .clickButtonFilterLocation()
+                .clickLabelCanada()
+                .assertPastEventsNumberIsNotNull();
+     //           .assertPastEventsNumber();
+    }
+
+
+    @Test
+    public void checkUpcomingEventsCardsDetails() {
+        MajorPage majorPage = new MajorPage(driver);
+
+        majorPage.open("https://events.epam.com/")
+                .clickEventsTab()
+                .clickUpcomingEventsButton()
+                .assertUpcomingEventsNumberIsNotNull()
+                .clickEventCard()
+                .checkRegButton()
+                .checkDetailedDate()
+                .checkEventProgram();
+    }
+
+
     @Test
     public void checkFilteredVideoCards() {
         MajorPage majorPage = new MajorPage(driver);
@@ -41,5 +71,8 @@ public class CheckNextEvents extends BaseHooks {
                 .getFilteredCardsNumber();
 
     }
+
+
+
 
 }
