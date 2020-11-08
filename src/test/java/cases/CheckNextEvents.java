@@ -9,7 +9,7 @@ import utils.BaseHooks;
 
 public class CheckNextEvents extends BaseHooks {
 
-    @Test
+    @Test(priority = 100)
     public void checkNextEvents() {
         MajorPage majorPage = new MajorPage(driver);
 
@@ -20,7 +20,7 @@ public class CheckNextEvents extends BaseHooks {
                  .assertUpcomingEventsNumber();
     }
 
-    @Test
+    @Test(priority = 200)
     public void checkUpcomingEventsCards() {
         MajorPage majorPage = new MajorPage(driver);
 
@@ -32,7 +32,7 @@ public class CheckNextEvents extends BaseHooks {
     }
 
 
-    @Test
+    @Test(priority = 400)
     public void checkPastEventsCards() {
         MajorPage majorPage = new MajorPage(driver);
 
@@ -42,11 +42,11 @@ public class CheckNextEvents extends BaseHooks {
                 .clickButtonFilterLocation()
                 .clickLabelCanada()
                 .assertPastEventsNumberIsNotNull();
-     //           .assertPastEventsNumber();
+    //            .assertPastEventsNumber();
     }
 
 
-    @Test
+    @Test(priority = 500)
     public void checkUpcomingEventsCardsDetails() {
         MajorPage majorPage = new MajorPage(driver);
 
@@ -61,14 +61,14 @@ public class CheckNextEvents extends BaseHooks {
     }
 
 
-    @Test
+    @Test(priority = 700)
     public void checkFilteredVideoCards() {
         MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()
                 .inputQaToFilter()
-                .getFilteredCardsNumber();
+                .assertFilteredCardsNumberContainsQA();
 
     }
 

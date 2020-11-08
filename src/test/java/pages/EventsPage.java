@@ -40,13 +40,13 @@ public class EventsPage extends BaseClass{
 
 
     @FindBys(@FindBy(xpath="//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Upcoming Events
-    private List<WebElement> listCount;    //evnt-card-wrapper
+    private List<WebElement> listCount;
 
-    @FindBys(@FindBy(xpath="//div[@class='evnt-events-row']//div[@class='evnt-events-column cell-3']")) //локатор списка карточек Past Events
-    private List<WebElement> listPastEventsCount;    //evnt-card-wrapper
+//    @FindBys(@FindBy(xpath="//div[@class='evnt-event-name']")) //локатор списка карточек Past Events
+//    private List<WebElement> listPastEventsCount;
 
 
-    String cardTag = "//div[@class='evnt-events-row']//div[@class='evnt-events-column cell-3']";
+    String cardTag = "//div[@class='evnt-event-name']";
     String lang = ".//p[@class='language']/span";  //
     String site = ".//p[@class='online']/span";
     String name = ".//h1/span";
@@ -103,14 +103,14 @@ public class EventsPage extends BaseClass{
     }
 
     public EventsPage assertPastEventsNumberIsNotNull(){
-      //  WebDriverWait wait = new WebDriverWait(driver,3).until(ExpectedConditions.visibilityOfElementLocated(
-//                WebDriverWait wait = new WebDriverWait(driver, 7);
-//        assertThat(wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.name(cardTag)))).isNotNull();
+        WebDriverWait wait = new WebDriverWait(driver, 7);
+        assertThat(wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(cardTag)))).isNotNull();
 
         Integer cardsCount = driver.findElements(By.xpath(cardTag)).size();
-
-      //  assertThat(driver.findElements(By.xpath(cardTag)).size()).isNotNull();
         logger.info("Проверяем, что количество карточек не null и = " + cardsCount);
+
+        assertThat(cardsCount).isEqualTo(Integer.parseInt(pastEventsCount.getText()));
+        logger.info("Проверяем, что количество карточек " + cardsCount + " равно счетчику на кнопке Past Events " + Integer.parseInt(pastEventsCount.getText()));
 
         return this;
     }
@@ -124,12 +124,12 @@ public class EventsPage extends BaseClass{
     }
 
 
-    public EventsPage assertPastEventsNumber(){
-        assertThat(listPastEventsCount.size()).isEqualTo(Integer.parseInt(pastEventsCount.getText()));
-        logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Past Events " + Integer.parseInt(pastEventsCount.getText()));
-
-        return this;
-    }
+//    public EventsPage assertPastEventsNumber(){
+//        assertThat(listPastEventsCount.size()).isEqualTo(Integer.parseInt(pastEventsCount.getText()));
+//        logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Past Events " + Integer.parseInt(pastEventsCount.getText()));
+//
+//        return this;
+//    }
 
     public EventsPage checkCardsContent(){
         for (Integer i = 0;i < listCount.size(); i++){
