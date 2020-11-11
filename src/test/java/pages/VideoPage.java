@@ -21,25 +21,25 @@ public class VideoPage extends BaseClass{
     @FindBy(xpath="//input[@class='evnt-text-fields form-control evnt-search']") //локатор поля ввода поиска
     private WebElement inputField;
 
-    @FindBy(xpath="//span(contains[text(), 'More Filters'])") //локатор More Filters
+    @FindBy(xpath="//span[text()='More Filters']") //локатор More Filters
     private WebElement moreFilters;
 
-    @FindBy(xpath="//span(contains[text(), 'Category'])") //локатор category
+    @FindBy(xpath="//span[text()='Category']") //локатор category
     private WebElement category;
 
     @FindBy(xpath="//label[@data-value='Testing']") //локатор category -> Testing
     private WebElement categoryTesting;
 
-    @FindBy(xpath="//span(contains[text(), 'Location'])") //локатор location
+    @FindBy(xpath="//span[text()='Location']") //локатор location
     private WebElement location;
 
     @FindBy(xpath="//label[@data-value='Belarus']") //локатор location –> Belarus
     private WebElement locationBelarus;
 
-    @FindBy(xpath="//span(contains[text(), 'Language'])") //локатор language
+    @FindBy(xpath="//span[text()='Language']") //локатор language
     private WebElement language;
 
-    @FindBy(xpath="//label[@data-value='English']") //локатор language –> English
+    @FindBy(xpath="//label[@data-value='ENGLISH']") //локатор language –> English
     private WebElement languageEnglish;
 
     @FindBys(@FindBy(xpath="//div[@class='evnt-card-wrapper']")) //локатор списка отфильтрованных карточек
@@ -88,13 +88,13 @@ public class VideoPage extends BaseClass{
     }
 
 
-    public VideoPage assertFilteredCardsNumberContainsQA(){
+    public VideoPage assertFilteredCardsContainsQaString(){
+
         for (Integer i = 0;i < listFilteredCards.size(); i++){
             String localCardName = listFilteredCards.get(i).findElement(By.xpath(name)).getText();
+               Assert.assertTrue(localCardName.contains("QA"));
 
-            Assert.assertTrue(localCardName.contains("QA"));
-            logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +localCardName+"\" ключевое слово поиска QA");
-
+               logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +localCardName+"\" ключевое слово поиска QA");
         }
 
         return this;
