@@ -3,11 +3,15 @@ package utils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
@@ -36,24 +40,37 @@ public class BaseHooks {
     public BaseHooks(){
     }
 
-    public static WebDriver getWebDriver() {
+    public static WebDriver getDriver() {
 
         return webDriverThreadLocal.get();
     }
 
 
     @BeforeMethod
-    public void runDriverThreadUp() {
-        WebDriver driver = WebDriverFactory.createDriver(WebDriverType.FIREFOX);
+    public void runDriverThreadUp() throws MalformedURLException {
+ //       WebDriver driver = WebDriverFactory.createDriver(WebDriverType.FIREFOX);
+ //       driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        String selenoidURL = "http://selenoid:4444/wd/hub";
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        caps.setVersion("86.0");
+        caps.setCapability("enableVNC", true);
+        caps.setCapability("screenResolution", "1280x1024");
+        caps.setCapability("enableVideo", true);
+        caps.setCapability("enableLog", true);
+
+        RemoteWebDriver driver = new RemoteWebDriver(URI.create(selenoidURL).toURL(), caps);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
         webDriverThreadLocal.set(driver);
     }
 
 
     @AfterMethod
     public void cleanDriverThreadUp() {
-        getWebDriver().manage().deleteAllCookies();
-        Optional.ofNullable(getWebDriver()).ifPresent(WebDriver::quit);
+        getDriver().manage().deleteAllCookies();
+        Optional.ofNullable(getDriver()).ifPresent(WebDriver::quit);
     }
 
 }
