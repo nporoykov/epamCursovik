@@ -52,7 +52,7 @@ public class BaseHooks {
  //       WebDriver driver = WebDriverFactory.createDriver(WebDriverType.FIREFOX);
  //       driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        String selenoidURL = "http://selenoid:4444/wd/hub";
+        String selenoidURL = "http://localhost:4444/wd/hub";
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
         caps.setVersion("85.0");
