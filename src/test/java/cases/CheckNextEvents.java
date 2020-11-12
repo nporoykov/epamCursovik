@@ -12,14 +12,14 @@ import java.text.ParseException;
 public class CheckNextEvents extends BaseHooks {
 
     @Test(priority = 100)
-    public void checkNextEvents() {
+    public void checkNextEventsEqualsToUpcomingEvents() {
         MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                  .clickEventsTab()
                  .clickUpcomingEventsButton()
                  .assertUpcomingEventsNumberIsNotNull()
-                 .assertUpcomingEventsNumber();
+                 .assertUpcomingEventsNumberEqualsCardsNumber();
     }
 
     @Test(priority = 200)
@@ -44,7 +44,7 @@ public class CheckNextEvents extends BaseHooks {
     }
 
     @Test(priority = 400)
-    public void checkPastEventsCards() throws InterruptedException {
+    public void checkPastEventsInCanada() throws InterruptedException {
         MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")

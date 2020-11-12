@@ -162,7 +162,7 @@ public class EventsPage extends BaseClass{
     }
 
 
-    public EventsPage assertUpcomingEventsNumber(){
+    public EventsPage assertUpcomingEventsNumberEqualsCardsNumber(){
         assertThat(listCount.size()).isEqualTo(Integer.parseInt(eventsCount.getText()));
         logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Upcoming Events " + Integer.parseInt(eventsCount.getText()));
 
