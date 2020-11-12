@@ -92,7 +92,7 @@ public class VideoPage extends BaseClass{
 
         for (Integer i = 0;i < listFilteredCards.size(); i++){
             String localCardName = listFilteredCards.get(i).findElement(By.xpath(name)).getText();
-               Assert.assertTrue(localCardName.contains("QA"));
+               assertThat(localCardName.contains("QA")).isTrue();
 
                logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +localCardName+"\" ключевое слово поиска QA");
         }
