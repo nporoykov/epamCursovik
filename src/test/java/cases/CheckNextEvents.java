@@ -11,9 +11,9 @@ import java.text.ParseException;
 
 public class CheckNextEvents extends BaseHooks {
 
-    @Test(priority = 100)
+    @Test
     public void checkNextEventsEqualsToUpcomingEvents() {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                  .clickEventsTab()
@@ -22,9 +22,9 @@ public class CheckNextEvents extends BaseHooks {
                  .assertUpcomingEventsNumberEqualsCardsNumber();
     }
 
-    @Test(priority = 200)
+    @Test
     public void checkUpcomingEventsCards() {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickEventsTab()
@@ -33,9 +33,9 @@ public class CheckNextEvents extends BaseHooks {
                 .checkCardsContent();
     }
 
-    @Test(priority = 300)
+    @Test
     public void checkThisWeekUpcomingEvents() throws ParseException, InterruptedException {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickEventsTab()
@@ -43,9 +43,9 @@ public class CheckNextEvents extends BaseHooks {
                 .assertThisWeekEventsWithInThisWeekDates();
     }
 
-    @Test(priority = 400)
+    @Test
     public void checkPastEventsInCanada() throws InterruptedException {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickEventsTab()
@@ -56,9 +56,9 @@ public class CheckNextEvents extends BaseHooks {
     }
 
 
-    @Test(priority = 500)
+    @Test
     public void checkUpcomingEventsCardsDetails() {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickEventsTab()
@@ -71,9 +71,9 @@ public class CheckNextEvents extends BaseHooks {
     }
 
 
-    @Test(priority = 600)
+    @Test
     public void checkFilteredVideoCards() {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()
@@ -83,9 +83,9 @@ public class CheckNextEvents extends BaseHooks {
     }
 
 
-    @Test(priority = 700)
+    @Test
     public void checkVideoCardsByKeyWord() {
-        MajorPage majorPage = new MajorPage(getDriver());
+        MajorPage majorPage = new MajorPage(driver);
 
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()
