@@ -62,6 +62,7 @@ public class BaseHooks {
         caps.setCapability("enableLog", true);
 
         RemoteWebDriver driver = new RemoteWebDriver(new URL(slenoidURL), caps);
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         webDriverThreadLocal.set(driver);
     }

@@ -60,7 +60,7 @@ public class VideoPage extends BaseClass{
 
     @Step("Вводим ключевое слово QA в поле поиска")
     public VideoPage inputQaToFilter(){
-        inputField.sendKeys("QA");
+        waitForElement(inputField).sendKeys("QA");
         logger.info("Вводим ключевое слово QA в поле поиска");
 
         return this;
@@ -94,11 +94,11 @@ public class VideoPage extends BaseClass{
 
     @Story("Проверяем, что карточка +(i+1)+ содержит в названии +localCardName+ ключевое слово поиска QA")
     public VideoPage assertFilteredCardsContainsQaString(){
-        for (Integer i = 0;i < listFilteredCards.size(); i++){
-     //       String localCardName = listFilteredCards.get(i).findElement(By.xpath(name)).getText();
-            Assert.assertTrue(listFilteredCards.get(i).findElement(By.xpath(name)).getText().contains("QA"));
+        for (Integer i = 0;i < waitForElements(listFilteredCards).size(); i++){
+            String localCardName = waitForElement(listFilteredCards.get(i).findElement(By.xpath(name))).getText();
+            Assert.assertTrue(localCardName.contains("QA"));
 
-               logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
+            logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
         }
 
         return this;

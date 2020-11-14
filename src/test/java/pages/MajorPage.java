@@ -18,10 +18,10 @@ public class MajorPage extends BaseClass{
 
     private Logger logger = LogManager.getLogger(MajorPage.class);
 
-    @FindBy(xpath="//a[contains(text(),'Events')]") //локатор event tab'а
+    @FindBy(xpath="//a[text()='Events']") //локатор event tab'а
     private WebElement eventTab;
 
-    @FindBy(xpath="//a[contains(text(),'Video')]") //локатор event tab'а
+    @FindBy(xpath="//a[text()='Video']") //локатор event tab'а
     private WebElement videoTab;
 
     public MajorPage(WebDriver driver) {
@@ -39,7 +39,7 @@ public class MajorPage extends BaseClass{
 
     @Step("Переходим на вкладку EVENTS")
     public EventsPage clickEventsTab(){
-        eventTab.click();
+        waitForElement(eventTab).click();
         logger.info("Переходим на вкладку EVENTS");
 
         return new EventsPage(driver);
@@ -47,7 +47,7 @@ public class MajorPage extends BaseClass{
 
     @Step("Переходим на вкладку VIDEO")
     public VideoPage clickVideoTab(){
-        videoTab.click();
+        waitForElement(videoTab).click();
         logger.info("Переходим на вкладку VIDEO");
 
         return new VideoPage(driver);

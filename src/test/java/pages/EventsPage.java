@@ -76,7 +76,7 @@ public class EventsPage extends BaseClass{
 
     @Step("Нажимаем на кнопку UPCOMING EVENTS")
     public EventsPage clickUpcomingEventsButton(){
-        upcomingEventsButton.click();
+        waitForElement(upcomingEventsButton).click();
         logger.info("Нажимаем на кнопку UPCOMING EVENTS");
 
         return this;
@@ -84,7 +84,7 @@ public class EventsPage extends BaseClass{
 
     @Step("Нажимаем на кнопку PAST EVENTS")
     public EventsPage clickPastEventsButton(){
-        pastEventsButton.click();
+        waitForElement(pastEventsButton).click();
         logger.info("Нажимаем на кнопку PAST EVENTS");
 
         return this;
