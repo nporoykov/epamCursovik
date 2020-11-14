@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import static org.assertj.core.api.Assertions.*;
@@ -27,7 +28,7 @@ import java.util.Locale;
 
 public class EventsPage extends BaseClass{
 
-    private Logger logger = LogManager.getLogger(MajorPage.class);
+    private static Logger logger = LogManager.getLogger(MajorPage.class);
 
     @FindBy(xpath="//span[text()='Upcoming events']") //локатор span Upcoming events
     private WebElement upcomingEventsButton;
@@ -73,6 +74,7 @@ public class EventsPage extends BaseClass{
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Нажимаем на кнопку UPCOMING EVENTS")
     public EventsPage clickUpcomingEventsButton(){
         upcomingEventsButton.click();
         logger.info("Нажимаем на кнопку UPCOMING EVENTS");
@@ -80,6 +82,7 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
+    @Step("Нажимаем на кнопку PAST EVENTS")
     public EventsPage clickPastEventsButton(){
         pastEventsButton.click();
         logger.info("Нажимаем на кнопку PAST EVENTS");
@@ -92,6 +95,7 @@ public class EventsPage extends BaseClass{
         return eventsCount.getText();
     }
 
+    @Step("Нажимаем на Location в блоке фильтров")
     public EventsPage clickButtonFilterLocation() {
         buttonFilterLocation.click();
         logger.info("Нажимаем на Location в блоке фильтров");
@@ -99,6 +103,7 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
+    @Step("Выбираем Canada в выпадающем списке")
     public EventsPage clickLabelCanada() {
         labelCanada.click();
         logger.info("Выбираем Canada в выпадающем списке");
@@ -106,7 +111,7 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
-
+    @Step("Проверяем, что количество карточек на странице не 0")
     public EventsPage assertUpcomingEventsNumberIsNotNull(){
         assertThat(listCount.size()).isNotNull();
         logger.info("Проверяем, что количество карточек не null");
@@ -114,6 +119,7 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
+    @Step("Проверяем, что на странице отображается столько карточек сколько на счетчике на кнопке Past Events")
     public EventsPage assertPastEventsNumber() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 7);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(cardTag)));
@@ -129,6 +135,7 @@ public class EventsPage extends BaseClass{
     }
 
 
+    @Step("Проверяем, что дата в карточке +cardDate+  >= первого дня недели  + returnFirstDayOfWeek() + и <= последнего дня недели +returnLastDayOfWeek()")
     public EventsPage assertThisWeekEventsWithInThisWeekDates() throws InterruptedException, ParseException {
         logger.info("Находим количество карточек в блоке This Week = " + thisWeekBlock.size());
 
@@ -161,7 +168,7 @@ public class EventsPage extends BaseClass{
         return lastDayOfTheWeek; // return Sunday
     }
 
-
+    @Step("Проверяем, что на странице отображается столько карточек сколько на счетчике на кнопке Upcoming Events")
     public EventsPage assertUpcomingEventsNumberEqualsCardsNumber(){
         assertThat(listCount.size()).isEqualTo(Integer.parseInt(eventsCount.getText()));
         logger.info("Проверяем, что количество карточек " + listCount.size() + " равно счетчику на кнопке Upcoming Events " + Integer.parseInt(eventsCount.getText()));
@@ -170,7 +177,7 @@ public class EventsPage extends BaseClass{
     }
 
 
-
+    @Step("Проверяем, что в карточках указана информация о мероприятии: место проведения, название мероприятия, ата мероприятия и т.д")
     public EventsPage checkCardsContent(){
         for (Integer i = 0;i < listCount.size(); i++){
 
@@ -203,6 +210,7 @@ public class EventsPage extends BaseClass{
         return this;
     }
 
+    @Step("Нажимает на любую карточку")
     public DetailedInfoEventPage clickEventCard() {
         listCount.get(0).click();
         logger.info("Нажимает на любую карточку");

@@ -1,5 +1,7 @@
 package pages;
 
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -56,6 +58,7 @@ public class VideoPage extends BaseClass{
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Вводим ключевое слово QA в поле поиска")
     public VideoPage inputQaToFilter(){
         inputField.sendKeys("QA");
         logger.info("Вводим ключевое слово QA в поле поиска");
@@ -63,6 +66,7 @@ public class VideoPage extends BaseClass{
         return this;
     }
 
+    @Step("Нажимаем на More Filters")
     public VideoPage clickMoreFilters(){
         moreFilters.click();
         logger.info("Нажимаем на More Filters");
@@ -71,6 +75,7 @@ public class VideoPage extends BaseClass{
     }
 
 
+    @Step("Выбираем: Category – Testing, Location – Belarus, Language – English")
     public VideoPage selectFilters(){
         category.click();
         categoryTesting.click();
@@ -87,14 +92,13 @@ public class VideoPage extends BaseClass{
         return this;
     }
 
-
+    @Story("Проверяем, что карточка +(i+1)+ содержит в названии +localCardName+ ключевое слово поиска QA")
     public VideoPage assertFilteredCardsContainsQaString(){
-
         for (Integer i = 0;i < listFilteredCards.size(); i++){
-            String localCardName = listFilteredCards.get(i).findElement(By.xpath(name)).getText();
-               assertThat(localCardName.contains("QA")).isTrue();
+     //       String localCardName = listFilteredCards.get(i).findElement(By.xpath(name)).getText();
+            Assert.assertTrue(listFilteredCards.get(i).findElement(By.xpath(name)).getText().contains("QA"));
 
-               logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +localCardName+"\" ключевое слово поиска QA");
+               logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
         }
 
         return this;
