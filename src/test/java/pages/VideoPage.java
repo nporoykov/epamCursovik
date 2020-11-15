@@ -1,18 +1,18 @@
 package pages;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -59,9 +59,10 @@ public class VideoPage extends BaseClass{
     }
 
     @Step("Вводим ключевое слово QA в поле поиска")
-    public VideoPage inputQaToFilter(){
+    public VideoPage inputQaToFilter() throws InterruptedException {
         waitForElement(inputField).sendKeys("QA");
         logger.info("Вводим ключевое слово QA в поле поиска");
+        Thread.sleep(2000); /////
 
         return this;
     }
@@ -94,9 +95,11 @@ public class VideoPage extends BaseClass{
 
     @Story("Проверяем, что карточка +(i+1)+ содержит в названии +localCardName+ ключевое слово поиска QA")
     public VideoPage assertFilteredCardsContainsQaString(){
-        for (Integer i = 0;i < waitForElements(listFilteredCards).size(); i++){
+        Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+
+        for (Integer i = 0;i < listFilteredCards.size(); i++){
             String localCardName = waitForElement(listFilteredCards.get(i).findElement(By.xpath(name))).getText();
-            Assert.assertTrue(localCardName.contains("QA"));
+             Assert.assertTrue(localCardName.contains("QA"));
 
             logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
         }

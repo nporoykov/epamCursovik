@@ -116,7 +116,7 @@ public class CheckNextEvents extends BaseHooks {
     @Feature("Тестирование https://events.epam.com/")
     @Story("Тест - Поиск докладов по ключевому слову")
     @Description("Проверка, что на странице отображаются доклады, содержащие в названии ключевое слово поиска")
-    public void checkVideoCardsByKeyWord() {
+    public void checkVideoCardsByKeyWord() throws InterruptedException {
         MajorPage majorPage = new MajorPage(getWebDriver());
 
         majorPage.open("https://events.epam.com/")
