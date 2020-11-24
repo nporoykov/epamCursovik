@@ -20,7 +20,7 @@ public class DetailedInfoEventPage extends BaseClass {
     @FindBy(xpath="//button[contains(text(),'Register')]") //локатор buttonRegister
     private WebElement buttonRegister;
 
-    @FindBy(xpath="//div[@class='evnt-content-text edit-wrapper hero']//h2[2]") //локатор detailedDate
+    @FindBy(xpath="//div[@class='evnt-panel-wrapper']//h4") //локатор detailedDate
     private WebElement detailedDate;
 
     @FindBys(@FindBy(xpath="//div[@class='evnt-card-wrapper']//h1/span")) //локатор списка h2 в карточке
@@ -42,7 +42,7 @@ public class DetailedInfoEventPage extends BaseClass {
     }
 
     public DetailedInfoEventPage checkDetailedDate(){
-        assertThat(detailedDate.getText()).isNotNull();
+        assertThat(waitForElement(detailedDate).getText()).isNotNull();
         logger.info("На странице отображается дата и время ="+detailedDate.getText());
 
         return this;
