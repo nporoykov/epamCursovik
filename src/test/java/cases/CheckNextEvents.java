@@ -122,7 +122,7 @@ public class CheckNextEvents extends BaseHooks {
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()
                 .inputQaToFilter()
-                .assertFilteredCardsContainsQaString();
+                .assertFilteredCardsContainsQaString();//
 
     }
 
