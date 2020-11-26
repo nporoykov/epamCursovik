@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseHooks {
 
-    private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+    static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
     String slenoidURL = "http://localhost:4444/wd/hub";
 
 

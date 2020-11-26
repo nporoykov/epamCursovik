@@ -95,11 +95,11 @@ public class VideoPage extends BaseClass{
 
     @Story("Проверяем, что карточка +(i+1)+ содержит в названии +localCardName+ ключевое слово поиска QA")
     public VideoPage assertFilteredCardsContainsQaString(){
-        Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+      //  Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         for (Integer i = 0;i < listFilteredCards.size(); i++){
             String localCardName = waitForElement(listFilteredCards.get(i).findElement(By.xpath(name))).getText();
-             Assert.assertTrue(localCardName.contains("QA"));
+             Assert.assertTrue(localCardName.contains("QA11"));////
 
             logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
         }

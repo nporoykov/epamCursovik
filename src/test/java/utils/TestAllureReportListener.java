@@ -3,8 +3,9 @@ package utils;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import pages.BaseClass;
-import utils.BaseHooks;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -13,6 +14,7 @@ import java.io.ByteArrayInputStream;
 
 
 public class TestAllureReportListener implements ITestListener {
+    WebDriver driver = BaseHooks.webDriverThreadLocal.get();
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
@@ -26,7 +28,7 @@ public class TestAllureReportListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+        Allure.addAttachment("Скриншот проваленного теста", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
     }
 
     @Override
