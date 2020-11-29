@@ -42,7 +42,7 @@ public class MajorPage extends BaseClass{
         }
     }
 
-    @Step("Открыта страница \"+url")
+    @Step("Открыта страница {url}")
     public MajorPage open(String url) {
         driver.get(url);
         logger.info("Открыта страница "+url);
@@ -52,7 +52,7 @@ public class MajorPage extends BaseClass{
 
     @Step("Переходим на вкладку EVENTS")
     public EventsPage clickEventsTab(){
-     //   clickTrustButton();
+        clickTrustButton();
         waitForElement(eventTab).click();
         logger.info("Переходим на вкладку EVENTS");
 
@@ -61,7 +61,7 @@ public class MajorPage extends BaseClass{
 
     @Step("Переходим на вкладку VIDEO")
     public VideoPage clickVideoTab(){
-   //     clickTrustButton();
+        clickTrustButton();
         waitForElement(videoTab).click();
         logger.info("Переходим на вкладку VIDEO");
 

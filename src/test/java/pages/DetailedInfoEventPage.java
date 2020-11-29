@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -33,7 +34,7 @@ public class DetailedInfoEventPage extends BaseClass {
         logger.info("Перешли на страницу с подробной информацией о мероприятии");
     }
 
-
+    @Step("Проверяем, что на странице отображается блок с кнопкой для регистрации")
     public DetailedInfoEventPage checkRegButton(){
         assertThat(buttonRegister.getText()).isNotNull();
         logger.info("На странице отображается блок с кнопкой для регистрации ="+buttonRegister.getText());
@@ -41,6 +42,7 @@ public class DetailedInfoEventPage extends BaseClass {
         return this;
     }
 
+    @Step("Проверяем, что на странице отображается дата и время")
     public DetailedInfoEventPage checkDetailedDate(){
         assertThat(waitForElement(detailedDate).getText()).isNotNull();
         logger.info("На странице отображается дата и время ="+detailedDate.getText());
@@ -48,6 +50,7 @@ public class DetailedInfoEventPage extends BaseClass {
         return this;
     }
 
+    @Step("Проверяем, что программа мероприятия включает различные мероприятия")
     public DetailedInfoEventPage checkEventProgram(){
         for (Integer i = 0;i < listEventProgram.size(); i++){
 

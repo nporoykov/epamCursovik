@@ -14,7 +14,7 @@ import java.io.ByteArrayInputStream;
 
 
 public class TestAllureReportListener implements ITestListener {
-    WebDriver driver = BaseHooks.webDriverThreadLocal.get();
+
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
@@ -28,6 +28,7 @@ public class TestAllureReportListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        WebDriver driver = BaseHooks.webDriverThreadLocal.get();
         Allure.addAttachment("Скриншот проваленного теста", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
     }
 

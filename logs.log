@@ -3312,3 +3312,364 @@
 2020-11-26 20:00:18,411 INFO p.MajorPage [TestNG-test=ToolsQA-1] Проверяем, что программа мероприятия включает Q&A session
 2020-11-26 20:00:18,957 INFO p.MajorPage [TestNG-test=ToolsQA-1] Проверяем, что программа мероприятия включает Коммуникации в новой реальности
 2020-11-26 20:00:19,223 INFO p.MajorPage [TestNG-test=ToolsQA-1] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:24:21,056 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:24:22,012 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:24:22,067 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 21:24:22,882 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:24:23,340 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 21:24:26,707 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:24:28,894 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку PAST EVENTS
+2020-11-29 21:24:29,972 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:24:31,428 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 21:24:31,820 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 21:24:31,909 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 21:24:31,930 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:24:32,405 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:24:32,768 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 21:24:32,789 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:24:32,886 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 21:24:33,118 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на Location в блоке фильтров
+2020-11-29 21:24:33,326 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 21:24:33,793 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 21:24:33,910 INFO p.MajorPage [TestNG-test=ToolsQA-3] Выбираем Canada в выпадающем списке
+2020-11-29 21:24:33,941 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 21:24:34,120 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 21:24:34,218 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 21:24:34,249 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 21:24:34,320 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 21:24:34,462 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 21:24:34,482 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 21:24:34,605 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 21:24:34,720 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 21:24:34,897 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 21:24:35,088 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:24:35,103 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 21:24:35,299 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 21:24:35,540 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null и = 1
+2020-11-29 21:24:35,616 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 21:24:35,715 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек 1 равно счетчику на кнопке Past Events 1
+2020-11-29 21:24:35,749 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 21:24:35,899 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 21:24:36,738 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 21:24:39,567 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 21:24:46,042 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:24:48,121 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:24:48,792 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:24:49,816 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:24:49,935 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:24:50,153 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 21:24:51,237 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку VIDEO
+2020-11-29 21:24:52,119 INFO p.MajorPage [TestNG-test=ToolsQA-3] Вводим ключевое слово QA в поле поиска
+2020-11-29 21:24:52,878 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимает на любую карточку
+2020-11-29 21:24:52,879 INFO p.MajorPage [TestNG-test=ToolsQA-2] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 21:24:53,621 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 21:24:53,907 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается дата и время =Когда?
+2020-11-29 21:24:54,059 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 21:24:54,297 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 21:24:54,484 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:24:54,734 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 21:24:54,898 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:30:27,083 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:30:28,719 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 21:30:31,556 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:30:31,683 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 21:30:35,610 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:30:35,801 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:30:36,345 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку PAST EVENTS
+2020-11-29 21:30:38,690 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на Location в блоке фильтров
+2020-11-29 21:30:39,590 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 21:30:39,680 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 21:30:39,746 INFO p.MajorPage [TestNG-test=ToolsQA-3] Выбираем Canada в выпадающем списке
+2020-11-29 21:30:39,811 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 21:30:40,669 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 21:30:40,750 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:30:40,944 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:30:41,512 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 21:30:41,663 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null и = 1
+2020-11-29 21:30:41,969 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 21:30:42,035 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек 1 равно счетчику на кнопке Past Events 1
+2020-11-29 21:30:42,393 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 21:30:42,708 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 21:30:42,725 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 21:30:42,991 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 21:30:43,193 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:30:43,376 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 21:30:43,472 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 21:30:43,566 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 21:30:43,601 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 21:30:43,866 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 21:30:44,091 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 21:30:44,259 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 21:30:44,443 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 21:30:44,499 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:30:44,589 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 21:30:44,626 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 21:30:44,680 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 21:30:44,720 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:30:45,063 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 21:30:45,827 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 21:30:47,603 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 21:30:51,584 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:30:52,751 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:30:54,326 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:30:54,959 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку VIDEO
+2020-11-29 21:30:55,778 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 21:30:56,089 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:30:56,210 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null
+2020-11-29 21:30:56,584 INFO p.MajorPage [TestNG-test=ToolsQA-5] Вводим ключевое слово QA в поле поиска
+2020-11-29 21:30:58,601 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимает на любую карточку
+2020-11-29 21:30:58,603 INFO p.MajorPage [TestNG-test=ToolsQA-3] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 21:30:59,206 INFO p.MajorPage [TestNG-test=ToolsQA-3] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 21:30:59,425 INFO p.MajorPage [TestNG-test=ToolsQA-3] На странице отображается дата и время =Когда?
+2020-11-29 21:30:59,594 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 21:30:59,758 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 21:30:59,955 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:31:00,230 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 21:31:00,390 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:33:22,562 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:33:23,569 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 21:33:23,962 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 21:33:25,128 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:33:25,134 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:33:29,405 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:33:29,860 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:33:29,926 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 21:33:30,343 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:33:30,543 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 21:33:30,643 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 21:33:30,937 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 21:33:31,378 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:33:31,787 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:33:32,064 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 21:33:32,434 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку PAST EVENTS
+2020-11-29 21:33:32,606 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:33:32,674 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 21:33:33,007 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 21:33:33,233 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 21:33:33,579 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 21:33:33,758 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 21:33:33,932 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 21:33:34,051 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на Location в блоке фильтров
+2020-11-29 21:33:34,106 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 21:33:34,178 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 21:33:34,268 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 21:33:34,288 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 21:33:34,486 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 21:33:34,631 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 21:33:34,772 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 21:33:34,922 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 21:33:35,144 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 21:33:35,210 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 21:33:35,267 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 21:33:35,295 INFO p.MajorPage [TestNG-test=ToolsQA-3] Выбираем Canada в выпадающем списке
+2020-11-29 21:33:36,094 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 21:33:36,990 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null и = 1
+2020-11-29 21:33:37,099 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек 1 равно счетчику на кнопке Past Events 1
+2020-11-29 21:33:37,734 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 21:33:38,945 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:33:43,381 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:33:43,655 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:33:43,691 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:33:43,739 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:33:45,853 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку VIDEO
+2020-11-29 21:33:46,444 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 21:33:46,538 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимает на любую карточку
+2020-11-29 21:33:46,539 INFO p.MajorPage [TestNG-test=ToolsQA-2] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 21:33:46,614 INFO p.MajorPage [TestNG-test=ToolsQA-5] Вводим ключевое слово QA в поле поиска
+2020-11-29 21:33:46,901 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 21:33:47,180 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается дата и время =Когда?
+2020-11-29 21:33:47,425 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 21:33:47,604 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 21:33:47,808 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:33:47,952 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 21:33:48,066 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:39:20,475 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:39:20,554 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:39:20,671 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 21:39:20,756 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 21:39:21,823 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:21,936 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:21,974 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:22,011 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:22,369 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:39:24,065 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:27,447 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 21:39:27,858 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:39:28,398 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 21:39:28,885 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:39:28,902 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 21:39:29,034 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:39:29,546 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:39:29,772 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку PAST EVENTS
+2020-11-29 21:39:30,139 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 21:39:30,393 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 21:39:30,425 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 21:39:30,455 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:39:30,654 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:39:30,703 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 21:39:30,959 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 21:39:31,127 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 21:39:31,216 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 21:39:31,434 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 21:39:31,545 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 21:39:31,683 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 21:39:31,708 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 21:39:31,756 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на Location в блоке фильтров
+2020-11-29 21:39:31,903 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 21:39:31,920 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 21:39:32,176 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 21:39:32,400 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 21:39:32,635 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 21:39:32,637 INFO p.MajorPage [TestNG-test=ToolsQA-3] Выбираем Canada в выпадающем списке
+2020-11-29 21:39:32,849 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 21:39:32,888 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 21:39:32,965 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 21:39:34,535 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null и = 1
+2020-11-29 21:39:34,652 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек 1 равно счетчику на кнопке Past Events 1
+2020-11-29 21:39:34,780 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 21:39:36,246 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 21:39:40,017 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:39:40,274 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:39:40,527 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:41,259 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 21:39:42,565 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:39:43,568 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку VIDEO
+2020-11-29 21:39:44,127 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 21:39:44,165 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:39:44,263 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:39:44,657 INFO p.MajorPage [TestNG-test=ToolsQA-5] Вводим ключевое слово QA в поле поиска
+2020-11-29 21:39:46,432 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимает на любую карточку
+2020-11-29 21:39:46,433 INFO p.MajorPage [TestNG-test=ToolsQA-2] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 21:39:46,843 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 21:39:47,550 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается дата и время =Когда?
+2020-11-29 21:39:47,735 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 21:39:47,946 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 21:39:48,234 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:39:48,470 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 21:39:48,584 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:45:06,524 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 21:45:06,991 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 21:45:07,145 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:07,421 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:07,465 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:45:07,624 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 21:45:07,869 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:08,523 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:08,705 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:45:09,410 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:11,291 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 21:45:12,001 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:45:12,606 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 21:45:12,704 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 21:45:12,933 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 21:45:13,403 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:45:13,756 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 21:45:13,994 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 21:45:14,251 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 21:45:14,591 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:45:14,737 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 21:45:14,858 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 21:45:14,917 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 21:45:14,982 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:45:15,142 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 21:45:15,187 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:45:15,273 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 21:45:15,340 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 21:45:15,415 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 21:45:15,444 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 21:45:15,452 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 21:45:15,670 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 21:45:15,880 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 21:45:16,038 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 21:45:16,234 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 21:45:16,461 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 21:45:16,535 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 21:45:16,639 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 21:45:17,550 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 21:45:18,946 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 21:45:24,629 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 21:45:24,930 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:25,181 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 21:45:26,441 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 21:45:29,815 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 21:45:30,076 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку VIDEO
+2020-11-29 21:45:30,673 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 21:45:31,245 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 21:45:31,485 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 21:45:32,590 INFO p.MajorPage [TestNG-test=ToolsQA-5] Вводим ключевое слово QA в поле поиска
+2020-11-29 21:45:35,331 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимает на любую карточку
+2020-11-29 21:45:35,332 INFO p.MajorPage [TestNG-test=ToolsQA-2] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 21:45:35,617 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 21:45:35,975 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается дата и время =Когда?
+2020-11-29 21:45:36,123 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 21:45:36,313 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 21:45:36,478 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 21:45:36,749 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 21:45:36,901 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 22:06:52,046 INFO p.MajorPage [TestNG-test=ToolsQA-3] Открыта страница https://events.epam.com/
+2020-11-29 22:06:52,111 INFO p.MajorPage [TestNG-test=ToolsQA-1] Открыта страница https://events.epam.com/
+2020-11-29 22:06:53,036 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 22:06:53,535 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на 'Принять coockies'
+2020-11-29 22:06:53,835 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 22:06:53,879 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 22:06:53,958 INFO p.MajorPage [TestNG-test=ToolsQA-4] Открыта страница https://events.epam.com/
+2020-11-29 22:06:54,766 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на 'Принять coockies'
+2020-11-29 22:06:54,890 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 22:06:55,049 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на 'Принять coockies'
+2020-11-29 22:07:00,015 INFO p.MajorPage [TestNG-test=ToolsQA-1] Переходим на вкладку VIDEO
+2020-11-29 22:07:00,734 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 22:07:01,133 INFO p.MajorPage [TestNG-test=ToolsQA-3] Переходим на вкладку EVENTS
+2020-11-29 22:07:01,276 INFO p.MajorPage [TestNG-test=ToolsQA-1] Нажимаем на More Filters
+2020-11-29 22:07:01,309 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку EVENTS
+2020-11-29 22:07:02,025 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на кнопку PAST EVENTS
+2020-11-29 22:07:02,081 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 22:07:02,196 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 22:07:02,424 INFO p.MajorPage [TestNG-test=ToolsQA-4] Переходим на вкладку EVENTS
+2020-11-29 22:07:02,604 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 22:07:02,733 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что количество карточек не null
+2020-11-29 22:07:02,923 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Category – Testing
+2020-11-29 22:07:02,983 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек 2 равно счетчику на кнопке Upcoming Events 2
+2020-11-29 22:07:03,179 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 место проведения не null и = Online only
+2020-11-29 22:07:03,359 INFO p.MajorPage [TestNG-test=ToolsQA-4] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 22:07:03,433 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 указанный язык не null и = Рус
+2020-11-29 22:07:03,704 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 название мероприятия не null и = Business Analysts Meetup #4 2020
+2020-11-29 22:07:03,782 INFO p.MajorPage [TestNG-test=ToolsQA-3] Нажимаем на Location в блоке фильтров
+2020-11-29 22:07:03,920 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 дата мероприятия не null и = 9 Dec 2020
+2020-11-29 22:07:04,109 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 информация о регистрации не null и = Registration opened
+2020-11-29 22:07:04,232 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 1 количество спикеров не null
+2020-11-29 22:07:04,336 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 1 = Konstantin Semenov
+2020-11-29 22:07:04,357 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_2 в карточке 1 = Alisa Khoroshenina
+2020-11-29 22:07:04,554 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 место проведения не null и = Online only
+2020-11-29 22:07:04,726 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 указанный язык не null и = Ru
+2020-11-29 22:07:04,726 INFO p.MajorPage [TestNG-test=ToolsQA-3] Выбираем Canada в выпадающем списке
+2020-11-29 22:07:04,927 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 название мероприятия не null и = DevOps Architecture Webinar
+2020-11-29 22:07:05,081 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 дата мероприятия не null и = 17 Dec 2020
+2020-11-29 22:07:05,260 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 информация о регистрации не null и = Registration opened
+2020-11-29 22:07:05,327 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что в карточке 2 количество спикеров не null
+2020-11-29 22:07:05,412 INFO p.MajorPage [TestNG-test=ToolsQA-5] Спикер №_1 в карточке 2 = Aleksandr Chikovani
+2020-11-29 22:07:05,792 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Location – Belarus
+2020-11-29 22:07:06,732 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек не null и = 1
+2020-11-29 22:07:06,888 INFO p.MajorPage [TestNG-test=ToolsQA-3] Проверяем, что количество карточек 1 равно счетчику на кнопке Past Events 1
+2020-11-29 22:07:07,549 INFO p.MajorPage [TestNG-test=ToolsQA-1] Пользователь выбирает: Language – English
+2020-11-29 22:07:11,889 INFO p.MajorPage [TestNG-test=ToolsQA-2] Открыта страница https://events.epam.com/
+2020-11-29 22:07:12,241 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на 'Принять coockies'
+2020-11-29 22:07:14,504 INFO p.MajorPage [TestNG-test=ToolsQA-5] Открыта страница https://events.epam.com/
+2020-11-29 22:07:14,939 INFO p.MajorPage [TestNG-test=ToolsQA-5] Нажимаем на 'Принять coockies'
+2020-11-29 22:07:15,669 INFO p.MajorPage [TestNG-test=ToolsQA-2] Переходим на вкладку EVENTS
+2020-11-29 22:07:16,072 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимаем на кнопку UPCOMING EVENTS
+2020-11-29 22:07:16,128 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что количество карточек не null
+2020-11-29 22:07:17,600 INFO p.MajorPage [TestNG-test=ToolsQA-5] Переходим на вкладку VIDEO
+2020-11-29 22:07:18,421 INFO p.MajorPage [TestNG-test=ToolsQA-4] Находим количество карточек в блоке This Week = 0
+2020-11-29 22:07:18,638 INFO p.MajorPage [TestNG-test=ToolsQA-5] Вводим ключевое слово QA в поле поиска
+2020-11-29 22:07:18,658 INFO p.MajorPage [TestNG-test=ToolsQA-2] Нажимает на любую карточку
+2020-11-29 22:07:18,659 INFO p.MajorPage [TestNG-test=ToolsQA-2] Перешли на страницу с подробной информацией о мероприятии
+2020-11-29 22:07:19,316 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается блок с кнопкой для регистрации =Register
+2020-11-29 22:07:19,605 INFO p.MajorPage [TestNG-test=ToolsQA-2] На странице отображается дата и время =Когда?
+2020-11-29 22:07:19,817 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Приветствие
+2020-11-29 22:07:19,981 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Что появилось первее - курица или MVP?
+2020-11-29 22:07:20,151 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 22:07:20,404 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает 50 оттенков стейкхолдеров
+2020-11-29 22:07:20,545 INFO p.MajorPage [TestNG-test=ToolsQA-2] Проверяем, что программа мероприятия включает Q&A session
+2020-11-29 22:07:20,865 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что карточка 1 содержит в названии "Памятка молодого QA менеджера" ключевое слово поиска QA
+2020-11-29 22:07:21,113 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что карточка 2 содержит в названии "[Community] 10 Mistakes Automation Engineers Still Make: the Evolution of QA Over the Last 25…" ключевое слово поиска QA
+2020-11-29 22:07:21,436 INFO p.MajorPage [TestNG-test=ToolsQA-5] Проверяем, что карточка 3 содержит в названии "[Community] How to Draw QA Architecture Automation in Few Slight Movements" ключевое слово поиска QA
