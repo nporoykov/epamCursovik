@@ -60,7 +60,7 @@ public class VideoPage extends BaseClass{
 
     @Step("Вводим ключевое слово QA в поле поиска")
     public VideoPage inputQaToFilter() throws InterruptedException {
-        waitForElement(inputField).sendKeys("QA");
+        waitForElement(inputField).sendKeys("QA"); ///// замена чтоб падали тесты QA
         logger.info("Вводим ключевое слово QA в поле поиска");
         Thread.sleep(2000); /////
 
@@ -93,17 +93,17 @@ public class VideoPage extends BaseClass{
         return this;
     }
 
-    @Story("Проверяем, что карточка +(i+1)+ содержит в названии +localCardName+ ключевое слово поиска QA")
+    @Story("Проверяем, что карточки содержат в названии ключевое слово поиска QA")
     public VideoPage assertFilteredCardsContainsQaString(){
-        Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 
         for (Integer i = 0;i < listFilteredCards.size(); i++){
             String localCardName = waitForElement(listFilteredCards.get(i).findElement(By.xpath(name))).getText();
-             Assert.assertTrue(localCardName.contains("QA"));
+             Assert.assertTrue(localCardName.contains("QA"));////
 
             logger.info("Проверяем, что карточка "+(i+1)+" содержит в названии \"" +listFilteredCards.get(i).findElement(By.xpath(name)).getText()+"\" ключевое слово поиска QA");
         }
 
+        Allure.addAttachment("Список карточек с со словом QA", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         return this;
     }
 

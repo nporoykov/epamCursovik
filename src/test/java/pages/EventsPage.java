@@ -33,7 +33,7 @@ public class EventsPage extends BaseClass{
     @FindBy(xpath="//span[text()='Upcoming events']") //локатор span Upcoming events
     private WebElement upcomingEventsButton;
 
-    @FindBy(xpath="//span[text()='Past Events']") //локатор span Past Events
+    @FindBy(xpath="//span[text()='Past Events']") //локатор span Past Events   /////падение теста Past Events
     private WebElement pastEventsButton;
 
     @FindBy(xpath="//span[text()='Upcoming']/following-sibling::span") //локатор счетчика Upcoming events
@@ -135,7 +135,7 @@ public class EventsPage extends BaseClass{
     }
 
 
-    @Step("Проверяем, что дата в карточке +cardDate+  >= первого дня недели  + returnFirstDayOfWeek() + и <= последнего дня недели +returnLastDayOfWeek()")
+    @Step("Проверяем, что дата в карточках находится в пределах текущей недели")
     public EventsPage assertThisWeekEventsWithInThisWeekDates() throws InterruptedException, ParseException {
         logger.info("Находим количество карточек в блоке This Week = " + thisWeekBlock.size());
 

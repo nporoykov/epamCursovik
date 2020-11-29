@@ -4,15 +4,17 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.MajorPage;
 import pages.EventsPage;
 import utils.BaseHooks;
+import utils.TestAllureReportListener;
 
 import java.text.ParseException;
 //import ;
 
-
+@Listeners({TestAllureReportListener.class})
 public class CheckNextEvents extends BaseHooks {
 
     @Test
@@ -122,7 +124,7 @@ public class CheckNextEvents extends BaseHooks {
         majorPage.open("https://events.epam.com/")
                 .clickVideoTab()
                 .inputQaToFilter()
-                .assertFilteredCardsContainsQaString();//
+                .assertFilteredCardsContainsQaString();/////
 
     }
 

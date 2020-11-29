@@ -42,7 +42,7 @@ public class MajorPage extends BaseClass{
         }
     }
 
-    @Step("Открыта страница \"+url")
+    @Step("Открыта страница {url}")
     public MajorPage open(String url) {
         driver.get(url);
         logger.info("Открыта страница "+url);
